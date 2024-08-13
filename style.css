@@ -1,12 +1,19 @@
-.cabecera{
- background-color: black important;
- display: flexbox;
- justify-content: center;
+.cabecera {
+  background-color: black important;
+  display: flexbox;
+  justify-content: center;
+}
+.navbar a {
+  color: rgb(10, 10, 10) !important;
+}
+.barra {
+  background-color: aqua !important;
+}
 
+.promos{
+    justify-content: center;
 }
-.navbar a{
-    color: rgb(40, 43, 43) !important;
-}
-.barra{
-    background-color: aqua !important;
+
+.r1{
+    padding: 20%;
 }
