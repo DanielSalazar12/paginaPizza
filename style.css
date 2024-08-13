@@ -1,0 +1,12 @@
+.cabecera{
+ background-color: black important;
+ display: flexbox;
+ justify-content: center;
+
+}
+.navbar a{
+    color: rgb(40, 43, 43) !important;
+}
+.barra{
+    background-color: aqua !important;
+}
