@@ -6,14 +6,12 @@
 .navbar a {
   color: rgb(10, 10, 10) !important;
 }
-.barra {
-  background-color: aqua !important;
+
+.r1 {
+  padding: 20%;
 }
 
-.promos{
-    justify-content: center;
+.carritoCompras {
+  background-color: black !important;
 }
 
-.r1{
-    padding: 20%;
-}

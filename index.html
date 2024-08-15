@@ -53,11 +53,58 @@
                     />
                   </a>
                 </div>
-                <div class="row2 r1">
-                  <a class="nav-link" href="#"
-                    >Carrito <img src="/img/shoppingcart_80945.png" alt=""
-                  /></a>
-                </div>
+                <li class="nav-item dropdown">
+                  <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                    <i class="bi bi-bell"></i>
+                    <button
+                      type="button"
+                      class="btn btn-light button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      <img
+                        src="/img/shoppingcart_80945.png"
+                        class="rounded float-end"
+                        alt="..."
+                      />
+                      <span class="badge text-bg-secondary" id="notificacionPedi">.</span>
+                    </button>
+                   
+                  <!-- End Notification Icon -->
+
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                    <li class="dropdown-header">
+                      <h2>Resumen de compra.</h2>
+                     
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+
+                    <li class="notification-item">
+                      <i class="bi bi-exclamation-circle text-warning"></i>
+                      <div>
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"></h5>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <div class="input-group input-group-sm mb-3">
+                              <span class="input-group-text" id="inputGroup-sizing-sm">Cantidad</span>
+                              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" >
+                            </div>
+                            <li class="list-group-item" id="TotalFactura">Total:</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-primary" onclick="calcularPago()">Pagar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                  <!-- End Notification Dropdown Items -->
+                </li>
               </div>
             </div>
           </div>
@@ -130,46 +177,71 @@
    
         <div class="row">
           <div class="col-2">
-            <div class="card" >ñ
-              <img src="/img/combo.jpg" class="card-img-top" alt="...">
+            <div class="card" >
+              <img src="/img/pizza1.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="cantidadPizza1"></textarea>
+                  <label for="floatingTextarea">Cantidad</label>
+                </div>
+                <button type="button" class="btn btn-success" onclick="pizza1()">Seleccionar</button>
               </div>
             </div>
           </div>
 
           <div class="col-2">
             <div class="card" >
-              <img src="/img/combo.jpg" class="card-img-top" alt="...">
+              <img src="/img/pizza2.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="cantidadPizza2"></textarea>
+                  <label for="floatingTextarea">Cantidad</label>
+                </div>
+                <button type="button" class="btn btn-success" onclick="pizza2()">Seleccionar</button>
               </div>
             </div>
           </div>
 
           <div class="col-2">
             <div class="card" >
-              <img src="/img/combo.jpg" class="card-img-top" alt="...">
+              <img src="/img/pizza3.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="cantidadPizza3"></textarea>
+                  <label for="floatingTextarea">Cantidad</label>
+                </div>
+                <button type="button" class="btn btn-success" onclick="pizza3()">Seleccionar</button>
               </div>
             </div>
           </div>
 
           <div class="col-2">
             <div class="card" >
-              <img src="/img/combo.jpg" class="card-img-top" alt="...">
+              <img src="/img/pizza4.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="cantidadPizza4"></textarea>
+                  <label for="floatingTextarea">Cantidad</label>
+                </div>
+                <button type="button" class="btn btn-success" onclick="pizza4()">Seleccionar</button>
               </div>
             </div>
           </div>
 
           <div class="col-2">
             <div class="card" >
-              <img src="/img/combo.jpg" class="card-img-top" alt="...">
+              <img src="/img/pizza5.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="cantidadPizza5"></textarea>
+                  <label for="floatingTextarea">Cantidad</label>
+                </div>
+                <button type="button" class="btn btn-success" onclick="pizza5()">Seleccionar</button>
               </div>
             </div>
           </div>
@@ -194,18 +266,28 @@
           <div class="row">
             <div class="col-2">
               <div class="card" >
-                <img src="/img/combo.jpg" class="card-img-top" alt="...">
+                <img src="/img/acom1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="cantidadAcom1"></textarea>
+                    <label for="floatingTextarea">Cantidad</label>
+                  </div>
+                  <button type="button" class="btn btn-success" onclick="acom1()">Seleccionar</button>
                 </div>
               </div>
             </div>
 
             <div class="col-2">
               <div class="card" >
-                <img src="/img/combo.jpg" class="card-img-top" alt="...">
+                <img src="/img/acom2.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="cantidadAcom2"></textarea>
+                    <label for="floatingTextarea">Cantidad</label>
+                  </div>
+                  <button type="button" class="btn btn-success" onclick="acom2()">Seleccionar</button>
                 </div>
               </div>
             </div>
@@ -213,27 +295,42 @@
 
             <div class="col-2">
               <div class="card" >
-                <img src="/img/combo.jpg" class="card-img-top" alt="...">
+                <img src="/img/acom3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="cantidadAcom3"></textarea>
+                    <label for="floatingTextarea">Cantidad</label>
+                  </div>
+                  <button type="button" class="btn btn-success" onclick="acom3()">Seleccionar</button>
                 </div>
               </div>
             </div>
    
             <div class="col-2">
               <div class="card" >
-                <img src="/img/combo.jpg" class="card-img-top" alt="...">
+                <img src="/img/acom4.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="cantidadAcom4"></textarea>
+                    <label for="floatingTextarea">Cantidad</label>
+                  </div>
+                  <button type="button" class="btn btn-success" onclick="acom4()">Seleccionar</button>
                 </div>
               </div>
             </div>
 
             <div class="col-2">
               <div class="card" >
-                <img src="/img/combo.jpg" class="card-img-top" alt="...">
+                <img src="/img/pizza5.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="cantidadAcom5"></textarea>
+                    <label for="floatingTextarea">Cantidad</label>
+                  </div>
+                  <button type="button" class="btn btn-success" onclick="acom5()">Seleccionar</button>
                 </div>
               </div>
             </div>
@@ -259,46 +356,64 @@
           <div class="row">
             <div class="col-3">
               <div class="card" >
-                <img src="/img/combo.jpg" class="card-img-top" alt="...">
+                <img src="/img/bebi1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Cantidad</label>
+                  </div>
+                  <button type="button" class="btn btn-success">Success</button>
                 </div>
               </div>
             </div>
          
             <div class="col-3">
               <div class="card" >
-                <img src="/img/combo.jpg" class="card-img-top" alt="...">
+                <img src="/img/bebi2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Cantidad</label>
+                  </div>
+                  <button type="button" class="btn btn-success">Success</button>
                 </div>
               </div>
             </div>
 
             <div class="col-3">
               <div class="card" >
-                <img src="/img/combo.jpg" class="card-img-top" alt="...">
+                <img src="/img/bebi3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Cantidad</label>
+                  </div>
+                  <button type="button" class="btn btn-success">Success</button>
                 </div>
               </div>
             </div>
 
             <div class="col-3">
               <div class="card" >
-                <img src="/img/combo.jpg" class="card-img-top" alt="...">
+                <img src="/img/bebi4.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Cantidad</label>
+                  </div>
+                  <button type="button" class="btn btn-success">Success</button>
                 </div>
               </div>
             </div>
           </div>
-         
-       
        </div>
       </div>
     </div>
-  </div>
+  </div><br>
 </div>
       <div class="row promos">
         <div class="col-4">
@@ -342,5 +457,5 @@
       crossorigin="anonymous"
     ></script>
   </body>
-  <script src="/ope2/app.js"></script>
+  <script src="/app.js"></script>
 </html>
